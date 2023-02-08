@@ -15,10 +15,10 @@ public class ProductService {
     public List<Product> getAll(){
         return productRepository.getAll();
     }
-    Optional<List<Product>> getByCategory(int categoryId){
+    public Optional<List<Product>> getByCategory(int categoryId){
         return productRepository.getByCategory(categoryId);
     }
-    Optional<List<Product>> getScarseProducts(int quantity){
+    public Optional<List<Product>> getScarseProducts(int quantity){
         return productRepository.getScarseProducts(quantity);
     }
     public Optional<Product> getProduct(int productId){

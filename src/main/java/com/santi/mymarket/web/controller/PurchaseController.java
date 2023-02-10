@@ -25,7 +25,7 @@ public class PurchaseController {
                 .map(purchases -> new ResponseEntity<>(purchases, HttpStatus.OK))
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
-    @PostMapping("/saves")
+    @PostMapping()
     public ResponseEntity<Purchase> save(@RequestBody Purchase purchase){
         return new ResponseEntity<>(purchaseService.save(purchase), HttpStatus.CREATED);
     }
